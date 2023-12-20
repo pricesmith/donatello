@@ -1,0 +1,8 @@
+{
+    "compilerOptions": {
+        // Bun type definitions for typescript
+        "types": ["bun-types"]
+
+        
+    }
+}
