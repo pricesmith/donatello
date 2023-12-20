@@ -12,3 +12,7 @@ telemetry = false
 # The values are parsed as JSON, except single-quoted strings are supported and `'undefined'` becomes `undefined` in JS.
 # This will probably change in a future release to be just regular TOML instead. It is a holdover from the CLI argument parsing.
 "process.env.bagel" = "'lox'"
+
+[test]
+# configuration goes here
+# root = "./__tests__"
