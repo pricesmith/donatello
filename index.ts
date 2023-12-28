@@ -1,17 +1,5 @@
-console.log("Hello via Bun!");
+import server = require('./src/server');
 
-const getUserChannelID = () => {}
+console.log("App running...");
 
-const getUserEmail = () => {}
-
-const getUserSubscriptions = () => {}
-
-const getAllUserInfo = () => {}
-
-const isUserSubscribed = () => {}
-
-const getChannelSubscribers = () => {}
-
-const loginAsAdmin = () => {}
-
-const loginAsUser = () => {}
+server.run();
