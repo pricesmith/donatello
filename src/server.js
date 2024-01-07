@@ -1,7 +1,8 @@
 // info on possible esModuleInterop error: https://www.youtube.com/watch?v=bx4AjADk6eQ
 // https://stackoverflow.com/questions/62273153/this-module-is-declared-with-using-export-and-can-only-be-used-with-a-defau 
-import express = require('express');
+const express = require('express');
 const authRoutes = require('./routes/auth').default;
+const passportConfig = require('./config/passport.config');
 
 
 const app = express();
