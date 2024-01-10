@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const passport = require('passport');
+import passport = require('passport');
 
 /// auth login
 router.get('/login', (req, res) => {
@@ -16,12 +16,14 @@ router.get('/logout', (req, res) => {
 
 /// google auth
 router.get('/google', passport.authenticate('google', {
+    // scope: ['email', 'profile', 'https://www.googleapis.com/auth/youtube.readonly']
     scope: ['profile']
 }));
 
 /// google auth callback redirect
-router.get('/google/redirect', (req, res) => {
-    res.send('Youve reached the callback URI');
+/// this passport middleware will take the code that we got from the initial request to google
+router.get('/google/redirect', passport.authenticate('google'), (req, res) => {
+    res.send(`You've reached the callback URI`);
 })
 
 export default router;
